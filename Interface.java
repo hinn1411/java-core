@@ -8,6 +8,8 @@ interface IHello2 {
     void sayHello();
 }
 
+// Interface inheritance
+
 interface IGoodbye extends  IGreeting {
     String goodbye = "Goodbye";
     void sayGoodbye();
@@ -16,6 +18,8 @@ interface IGoodbye extends  IGreeting {
 interface IGreeting {
 
 }
+
+// Multiple inheritance
 
 class Hello implements IHello, IHello2, IGoodbye {
     @Override
@@ -27,6 +31,8 @@ class Hello implements IHello, IHello2, IGoodbye {
         System.out.println(IGoodbye.goodbye);
     }
 }
+
+// Static and default methods in interface
 
 interface ResourceLoader {
     static boolean isPathExisted(String path) {
@@ -41,6 +47,23 @@ interface ResourceLoader {
     void load(String resourcePath);
 }
 
+// Generic interface
+
+class Car {
+
+}
+
+interface Producer<T> {
+    T produce();
+}
+
+class CarProducer implements  Producer<Car> {
+    @Override
+    public Car produce() {
+        return new Car();
+    }
+}
+
 class FileLoader implements ResourceLoader {
     @Override
     public void load(String resourcePath) {
@@ -51,6 +74,9 @@ class FileLoader implements ResourceLoader {
 
 public class Interface {
     public static void main(String[] args) {
-//        IHello myInterface = new MyInterfaceImpl();
+        IHello myInterface = new Hello();
+
+        Producer<Car> carProducer = new CarProducer();
+        Car c = carProducer.produce();
     }
 }
