@@ -15,5 +15,6 @@ public class SetExample {
            System.out.println(element);
         });
         a.remove("Giang");
+
     }
 }
