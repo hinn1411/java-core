@@ -1,10 +1,12 @@
+package exception_handling;
+
 class CustomException extends java.lang.Exception {
     private int a;
     CustomException(int a) {
         this.a = a;
     }
     public String toString() {
-        return String.format("Exception number = %d", a);
+        return String.format("exception_handling.Exception number = %d", a);
     }
 }
 public class Exception {
@@ -26,7 +28,7 @@ public class Exception {
             int a[] = new int[5];
             a[7] = 9;
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Array index out of bound!");
+            System.out.println("collections.Array index out of bound!");
         }
 
         try {

@@ -1,3 +1,4 @@
+package basics;
 
 class Clock {
     private long time = 0;

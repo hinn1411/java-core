@@ -1,3 +1,5 @@
+package basics;
+
 import java.lang.annotation.*;
 
 @Deprecated
@@ -26,7 +28,7 @@ class MyClass {
 
 
 class MyChildClass extends MyClass {
-// Child class inherits @MyAnnotation because of @Inherited is declared
+// Child class inherits @basics.MyAnnotation because of @Inherited is declared
 }
 
 public class Annotation {

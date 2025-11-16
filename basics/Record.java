@@ -1,3 +1,5 @@
+package basics;
+
 record Vehicle (String brand, String licensePlate, long price) {}
 public class Record {
     public  static  void main(String[] args) {

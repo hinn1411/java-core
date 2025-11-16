@@ -1,5 +1,7 @@
+package oop;
+
 interface IHello {
-    String hello = "Hello";
+    String hello = "oop.Hello";
     void sayHello();
 }
 
@@ -8,7 +10,7 @@ interface IHello2 {
     void sayHello();
 }
 
-// Interface inheritance
+// oop.Interface inheritance
 
 interface IGoodbye extends  IGreeting {
     String goodbye = "Goodbye";

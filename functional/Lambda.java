@@ -1,3 +1,5 @@
+package functional;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
@@ -31,15 +33,15 @@ interface MyOperator {
 
 public class Lambda {
     public static void main(String[] args) {
-        // Lambda implements functional interface
+        // functional.Lambda implements functional interface
         Button primaryButton = new Button();
         primaryButton.onStateChange(((x, y, z) -> System.out.printf("%s, %s, %s%n", x, y, z)));
-        // Lambda implements interface with default and static methods
+        // functional.Lambda implements interface with default and static methods
         IPrintable myInterface = System.out::println;
         // Type inference with var
         Function<String, String> toLower = (var input) -> input.toLowerCase();
         Function<String, String> toLowerCase = String::toLowerCase;
-        // Lambda as Object
+        // functional.Lambda as Object
         MyOperator myOperator = (a, b) -> a > b;
         boolean compareResult = myOperator.compare(1, 2);
     }

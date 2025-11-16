@@ -1,3 +1,5 @@
+package oop;
+
 class ClientComponent {
     private MyDao myDao;
 

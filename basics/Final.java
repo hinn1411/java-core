@@ -1,3 +1,5 @@
+package basics;
+
 public class Final {
     public static int functionWithFinalParams(final int x, final int z) {
         return x + z;

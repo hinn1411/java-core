@@ -1,3 +1,5 @@
+package oop;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -50,8 +52,8 @@ class Department implements Cloneable {
             // Deep copy for mutable fields
             cloneDepartment.employees = new ArrayList<>();
             for (Person employee: employees) {
-                // We don't need to deep copy Person because all fields are primitive
-                // If there is a reference field, we have to deep copy Person
+                // We don't need to deep copy oop.Person because all fields are primitive
+                // If there is a reference field, we have to deep copy oop.Person
                 cloneDepartment.employees.add(employee.clone());
             }
             return cloneDepartment;

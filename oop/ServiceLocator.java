@@ -1,3 +1,5 @@
+package oop;
+
 class MoviesLister {
     MoviesFinder finder = MoviesServiceLocator.moviesFinder();
 }
@@ -31,6 +33,7 @@ class Tester {
     }
 }
 
+// Anti pattern
 public class ServiceLocator {
     public static void main(String[] args ) {
 

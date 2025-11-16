@@ -1,7 +1,11 @@
+package functional;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 
 public class StreamAPI {
     private static long counter;
@@ -25,5 +29,15 @@ public class StreamAPI {
             return element.toUpperCase();
         }).findFirst();
 
+        long size = lst.stream().skip(2).map(element -> {
+            wasCalled();
+            return element.substring(0, 3);
+        }).skip(2).count();
+
+        System.out.println(List.<String>of("1", "2", "2").
+                stream().collect(Collectors.joining(", ", "[", "]")));
+
+        List<Integer> intList = List.of(1,2,3);
+        intList.parallelStream().forEach(System.out::println);
     }
 }

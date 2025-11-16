@@ -1,3 +1,5 @@
+package basics;
+
 class Enclosing {
     private final static int x = 1;
     public static class StaticNested {
@@ -40,9 +42,9 @@ class NewOuter {
         public void run () {
             System.out.println("a = " + a);
             System.out.println("b = " + b);
-            System.out.println("NewOuter.this.a = " + NewOuter.this.a);
-            System.out.println("NewOuter.b = " + NewOuter.b);
-            System.out.println("NewOuter.this.b = " + NewOuter.this.b);
+            System.out.println("basics.NewOuter.this.a = " + NewOuter.this.a);
+            System.out.println("basics.NewOuter.b = " + NewOuter.b);
+            System.out.println("basics.NewOuter.this.b = " + NewOuter.this.b);
         }
     }
 }

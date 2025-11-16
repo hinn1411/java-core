@@ -1,10 +1,12 @@
+package basics;
+
 public class InstanceBlock {
     {
         System.out.println("Instance block 1");
     }
 
     public InstanceBlock() {
-        System.out.println("InstanceBlock");
+        System.out.println("basics.InstanceBlock");
     }
 
     {
